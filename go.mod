@@ -1,4 +1,4 @@
-module github.com/vpnishe/crossofficevpn_server.git
+module github.com/vpnishe/co_server
 
 go 1.14
 
