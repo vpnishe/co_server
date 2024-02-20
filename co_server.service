@@ -1,0 +1,15 @@
+[Unit]
+Description=co_server
+After=network.target 
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5s
+PIDFile=/opt/co_server/co_server.pid
+ExecStart=/opt/co_server/co_server -config=/opt/co_server/config.json -logPath=/opt/co_server/logs
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
+  
+[Install]
+WantedBy=multi-user.target
